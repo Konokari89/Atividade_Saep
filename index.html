@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>Gestão de Veículos</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="app.js" defer></script>
+    </head>
+    <body>
+        <h1>Gestão de Veículos</h1>
+        <section id="veiculos-section">
+            <h2>Veículos</h2>
+            <button id="btn-listar">Atualizar Lista</button>
+            <ul id="veiculos-list"></ul>
+        </section>
+        <section id="form-section">
+            <h2 id="form-title">Adicionar Veículo</h2>
+            <form id="veiculo-form">
+                <input type="hidden" id="veiculo-id">
+                <label>Placa: <input type="text" id="placa" maxlength="7" required></label>
+                <label>Marca: <input type="text" id="marca" required></label>
+                <label>Modelo: <input type="text" id="modelo" required></label>
+                <label>Quilometragem: <input type="number" id="quilometragem" step="0.01" required></label>
+                <button type="submit" id="btn-salvar">Salvar</button>
+                <button type="button" id="btn-cancelar" style="display:none;">Cancelar</button>
+            </form>
+        </section>
+
+        <section id="usuarios-section">
+            <h2>Usuários</h2>
+            <button id="btn-listar-usuarios">Atualizar Lista</button>
+            <ul id="usuarios-list"></ul>
+            <form id="usuario-form">
+                <input type="hidden" id="usuario-id">
+                <label>Nome: <input type="text" id="usuario-nome" required></label>
+                <label>CPF: <input type="text" id="usuario-cpf" maxlength="11" required></label>
+                <label>Senha: <input type="password" id="usuario-senha" required></label>
+                <label>Tipo: <input type="text" id="usuario-tipo" required></label>
+                <button type="submit" id="btn-salvar-usuario">Salvar</button>
+                <button type="button" id="btn-cancelar-usuario" style="display:none;">Cancelar</button>
+            </form>
+        </section>
+
+        <section id="manutencoes-section">
+            <h2>Manutenções</h2>
+            <button id="btn-listar-manutencoes">Atualizar Lista</button>
+            <ul id="manutencoes-list"></ul>
+            <form id="manutencao-form">
+                <input type="hidden" id="manutencao-id">
+                <label>Tipo: <input type="text" id="manutencao-tipo" required></label>
+                <label>Custo: <input type="number" id="manutencao-custo" step="0.01" required></label>
+                <label>Data/Hora: <input type="datetime-local" id="manutencao-dia_hora" required></label>
+                <button type="submit" id="btn-salvar-manutencao">Salvar</button>
+                <button type="button" id="btn-cancelar-manutencao" style="display:none;">Cancelar</button>
+            </form>
+        </section>
+
+        <section id="viagens-section">
+            <h2>Viagens Realizadas</h2>
+            <button id="btn-listar-viagens">Atualizar Lista</button>
+            <ul id="viagens-list"></ul>
+            <form id="viagem-form">
+                <label>Data/Hora: <input type="datetime-local" id="viagem-data_hora" required></label>
+                <label>Origem: <input type="text" id="viagem-origem" required></label>
+                <label>Destino: <input type="text" id="viagem-destino" required></label>
+                <label>Placa: <input type="text" id="viagem-placa" maxlength="7" required></label>
+                <label>ID Usuário: <input type="number" id="viagem-id_usuario" required></label>
+                <button type="submit" id="btn-salvar-viagem">Salvar</button>
+            </form>
+        </section>
+
+        <section id="manutencoes-realizadas-section">
+            <h2>Manutenções Realizadas</h2>
+            <button id="btn-listar-manutencoes-realizadas">Atualizar Lista</button>
+            <ul id="manutencoes-realizadas-list"></ul>
+            <form id="manutencao-realizada-form">
+                <label>Placa: <input type="text" id="manutencao-realizada-placa" maxlength="7" required></label>
+                <label>ID Manutenção: <input type="number" id="manutencao-realizada-id_manutencao" required></label>
+                <button type="submit" id="btn-salvar-manutencao-realizada">Salvar</button>
+            </form>
+        </section>
+    </body>

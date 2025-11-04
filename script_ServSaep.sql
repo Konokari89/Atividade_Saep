@@ -1,3 +1,7 @@
+//Recomendação: utilizar o migrate do Django para criar o 
+//banco de dados e tabelas automaticamente para evitar
+//inconsistências. Este script é fornecido apenas para referência.
+
 create database translog_db;
 
 use translog_db;
